@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <!-- bootstrap css cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- custom styling -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <main>
+        <section class="user_dashboard">
+            <div class="bg-light py-2">
+                <div class="container-lg">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h3 class="mb-0">Dashboard</h3>
+                        <li class="list-style-none nav-item dropdown pe-3">
+
+                            <span role="button" class="nav-link nav-profile d-flex align-items-center pe-0"
+                                data-bs-toggle="dropdown">
+                                <img src="./assets/images/no_avatar.jpg"
+                                    alt="Profile" class="rounded-circle user_img">
+                                <span class="dropdown-toggle ps-2 text-dark">User Name</span>
+                            </span><!-- End Profile Iamge Icon -->
+
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                                <li class="dropdown-header">
+                                    <h5>User Name</h5>
+                                    <span>User Designation</span>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="far fa-address-card"></i>
+                                        <span class="ms-2">Dashboard</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="fas fa-chart-area"></i>
+                                        <span class="ms-2">Total Usage</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                                        <i class="fas fa-file-invoice-dollar"></i>
+                                        <span class="ms-2">My Orders</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                        <span class="ms-2">Sign Out</span>
+                                    </a>
+                                </li>
+
+                            </ul><!-- End Profile Dropdown Items -->
+                        </li>
+                    </div>
+                </div>
+            </div>
+            <div class="container-lg">
+                <div class="row pt-5">
+                    <div class="col-md-4 mb-5">
+                        <div class="card p-4 shadow text-center">
+                            <div class="icon-box token">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <h1>0</h1>
+                            <p class="mb-0 discription">Token Not Available</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <div class="card p-4 shadow text-center">
+                            <div class="icon-box subscribe">
+                                <i class="far fa-bell"></i>
+                            </div>
+                            <h1>45</h1>
+                            <p class="mb-0 discription">View Subscribed Content</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <div class="card p-4 shadow text-center">
+                            <div class="icon-box order">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                            </div>
+                            <h1>06</h1>
+                            <p class="mb-0 discription">My Orders</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- graph -->
+            <div class="container-lg">
+                <div class="row">
+                    <div class="col-md-6 mb-5">
+                        <div class="card p-4 shadow text-center">
+                            <h4 class="border-bottom pb-3 mb-3">Avg. Occupancy Rate</h4>
+                            <!-- spline area chart div -->
+                            <div id="spline_area_chart"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-5">
+                        <div class="card p-4 shadow text-center">
+                            <h4 class="border-bottom mb-3 pb-3">Repeat customer</h4>
+                            <!-- basic column chart div -->
+                            <div id="basic_column_chart"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mb-5">
+                        <div class="card p-4 shadow text-center">
+                            <h4 class="border-bottom mb-3 pb-3">Revenue per Available room</h4>
+                            <!-- stacked column chart div -->
+                            <div id="stacked_column_chart"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-5">
+                        <div class="card p-4 shadow text-center">
+                            <h4 class="border-bottom mb-3 pb-3">Ordering Breakdown</h4>
+                            <!-- simple donut chart div -->
+                            <div id="simple_donut_chart"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-5">
+                        <div class="card p-4 shadow text-center">
+                            <h4 class="border-bottom mb-3 pb-3">Booking Source</h4>
+                            <!-- simple pie chart div -->
+                            <div id="simple_pie_chart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- graph -->
+        </section>
+    </main>
+
+
+
+
+
+
+
+    <!-- bootstrap javascript cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <!-- fontawesome cdn -->
+    <script src="https://kit.fontawesome.com/1cb4e2d48a.js" crossorigin="anonymous"></script>
+    <!-- ApexChar cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- javascript file -->
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
